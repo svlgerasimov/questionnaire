@@ -1,0 +1,30 @@
+server:
+  port: 8080
+  servlet:
+    encoding:
+      charset: UTF-8
+      force-response: true
+spring:
+  jpa:
+    hibernate:
+      ddl-auto: none
+    properties:
+      hibernate:
+        dialect: org.hibernate.dialect.PostgreSQL10Dialect
+        format_sql: true
+    show-sql: true
+  sql:
+    init:
+      mode: always
+  datasource:
+    driver-class-name: org.postgresql.Driver
+    url: jdbc:postgresql://localhost:6542/main
+    username: user
+    password: password
+logging.level:
+  org.springframework.orm.jpa: INFO
+  org.springframework.orm.jpa.JpaTransactionManager: DEBUG
+  org.springframework.transaction: INFO
+  org.springframework.transaction.interceptor: TRACE
+  ort.zalando.logbook: TRACE
+  com.github.svlgerasimov.questionnaire: DEBUG
