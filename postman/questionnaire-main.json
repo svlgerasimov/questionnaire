@@ -1,0 +1,132 @@
+{
+	"info": {
+		"_postman_id": "6ab2f464-31d5-4a56-b52a-f8ede67a50eb",
+		"name": "Questionnaire-main",
+		"schema": "https://schema.getpostman.com/json/collection/v2.1.0/collection.json"
+	},
+	"item": [
+		{
+			"name": "Add new valid empty form",
+			"request": {
+				"method": "POST",
+				"header": [],
+				"body": {
+					"mode": "raw",
+					"raw": "{\r\n    \"name\": \"New empty form 1\"\r\n}",
+					"options": {
+						"raw": {
+							"language": "json"
+						}
+					}
+				},
+				"url": {
+					"raw": "{{baseUrl}}/api/forms",
+					"host": [
+						"{{baseUrl}}"
+					],
+					"path": [
+						"api",
+						"forms"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "Find existing form by id",
+			"request": {
+				"method": "GET",
+				"header": [],
+				"url": {
+					"raw": "{{baseUrl}}/api/forms/1",
+					"host": [
+						"{{baseUrl}}"
+					],
+					"path": [
+						"api",
+						"forms",
+						"1"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "Add question to existing form",
+			"request": {
+				"method": "POST",
+				"header": [],
+				"body": {
+					"mode": "raw",
+					"raw": "{\r\n    \"text\": \"A new question 1\"\r\n}",
+					"options": {
+						"raw": {
+							"language": "json"
+						}
+					}
+				},
+				"url": {
+					"raw": "{{baseUrl}}/api/forms/1/questions",
+					"host": [
+						"{{baseUrl}}"
+					],
+					"path": [
+						"api",
+						"forms",
+						"1",
+						"questions"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "Find existing question by id and correct formId",
+			"request": {
+				"method": "GET",
+				"header": [],
+				"url": {
+					"raw": "{{baseUrl}}/api/forms/1/questions/1",
+					"host": [
+						"{{baseUrl}}"
+					],
+					"path": [
+						"api",
+						"forms",
+						"1",
+						"questions",
+						"1"
+					]
+				}
+			},
+			"response": []
+		}
+	],
+	"event": [
+		{
+			"listen": "prerequest",
+			"script": {
+				"type": "text/javascript",
+				"exec": [
+					""
+				]
+			}
+		},
+		{
+			"listen": "test",
+			"script": {
+				"type": "text/javascript",
+				"exec": [
+					""
+				]
+			}
+		}
+	],
+	"variable": [
+		{
+			"key": "baseUrl",
+			"value": "http://localhost:8080",
+			"type": "default"
+		}
+	]
+}
