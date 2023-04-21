@@ -36,6 +36,11 @@ public class QuestionAccessorImpl implements QuestionAccessor {
     }
 
     @Override
+    public List<QuestionEntity> findAllByIdIn(List<Long> ids) {
+        return questionRepository.finsAllByIdIn(ids);
+    }
+
+    @Override
     public QuestionEntity save(QuestionEntity entity) {
         return questionRepository.save(entity);
     }

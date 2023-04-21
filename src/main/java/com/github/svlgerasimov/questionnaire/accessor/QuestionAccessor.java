@@ -11,5 +11,7 @@ public interface QuestionAccessor {
 
     List<QuestionEntity> findAllByFormId(Long formId);
 
+    List<QuestionEntity> findAllByIdIn(List<Long> ids);
+
     QuestionEntity save(QuestionEntity entity);
 }
