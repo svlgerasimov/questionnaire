@@ -1,0 +1,38 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Title</title>
+    <link rel="stylesheet" href="style.css">
+<!--    <style>-->
+<!--        table, th, td {-->
+<!--            border: 1px solid darkslategray;-->
+<!--            border-collapse: collapse;-->
+<!--        }-->
+<!--        th, td {-->
+<!--            background-color: #96D4D4;-->
+<!--            color: darkblue;-->
+<!--            padding: 15px;-->
+<!--        }-->
+<!--    </style>-->
+    <script src="https://unpkg.com/vue@next"></script>
+    <script src="https://unpkg.com/axios@1.1.2/dist/axios.min.js"></script>
+</head>
+<body>
+<div id="formAnswers">
+    <h1> {{ title }} </h1>
+    <table>
+        <tr>
+            <th>id</th>
+            <th v-for="question in questions"> {{ question.text }}</th>
+        </tr>
+        <tr v-for="answersSet in answersSets">
+            <td> {{ answersSet.id }} </td>
+            <td v-for="answer in answersSet.answers"> {{ answer.text }} </td>
+<!--            <td>qwe {{answersSet}}</td>-->
+        </tr>
+    </table>
+</div>
+<script src="answers.js"></script>
+</body>
+</html>

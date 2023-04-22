@@ -1,0 +1,49 @@
+:root {
+    --app-stroke-color: navy;
+    --app-main-color: steelblue;
+    --app-background-color: aliceblue;
+}
+
+body {
+    background-color: var(--app-background-color);
+    color: var(--app-stroke-color);
+    margin: auto;
+
+    width: 83%;
+    /*margin: 2 auto;*/
+    padding: 23px;
+    /*background: green;*/
+    text-align: center;
+    border: 1px solid var(--app-main-color);
+    border-radius: 2px;
+}
+
+table {
+    margin-left: auto;
+    margin-right: auto;
+}
+
+table, th, td {
+    border: 1px solid var(--app-background-color);
+    /*border-collapse: collapse;*/
+}
+th, td {
+    background-color: var(--app-main-color);
+    color: var(--app-background-color);
+    padding: 15px;
+}
+
+button {
+    margin: 25px;
+    padding: 15px 32px;
+    text-align: center;
+    border: 1px solid var(--app-main-color);
+    border-radius: 2px;
+    transition-duration: 0.4s;
+    background-color: var(--app-main-color);
+    color: var(--app-background-color);
+}
+button:hover {
+    background-color: var(--app-background-color);
+    color: var(--app-main-color);
+}

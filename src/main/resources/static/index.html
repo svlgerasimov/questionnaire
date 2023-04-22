@@ -3,12 +3,38 @@
 <head>
     <meta charset="UTF-8">
     <title>Title</title>
-    <script src="https://unpkg.com/vue@2"></script>
+    <link rel="stylesheet" href="style.css">
+    <script src="https://unpkg.com/vue@next"></script>
     <script src="https://unpkg.com/axios@1.1.2/dist/axios.min.js"></script>
 </head>
 <body>
-    <div id="app">
-        {{ message }}
+    <div id="form-app">
+        <h1> {{ title }} </h1>
+        <table>
+            <thead>
+                <tr>
+                    <th>id</th>
+                    <th>Question</th>
+                    <th>Your answer here</th>
+                </tr>
+            </thead>
+            <tbody>
+                <tr is="vue:question-item"
+                    v-for="question in questions"
+                    v-bind:question="question"
+                    v-bind:key="question.id"
+                ></tr>
+            </tbody>
+<!--            <tr v-for="question in questions">-->
+<!--                <td>{{ question.id }}</td>-->
+<!--                <td>{{ question.text }}</td>-->
+<!--                <td>-->
+<!--                    <input placeholder="print your answer">-->
+<!--                </td>-->
+<!--            </tr>-->
+        </table>
+        <span> {{answers}} </span>
+        <button v-on:click="sendAnswers">Send</button>
     </div>
 
     <script src="test_script.js">
